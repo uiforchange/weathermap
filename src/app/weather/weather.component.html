@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <section>
+      <app-dropdown (customerChange)="update($event)"></app-dropdown>
+    </section>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <p *ngIf="details; else nextBox">
+      <app-weatherdetails [weatherdet]="details"></app-weatherdetails>
+    </p>
+    <ng-template #nextBox style="margin :10px;">
+      <section>
+        Please select your country to view the current details of the weather
+      </section>
+    </ng-template>
+  </div>
+</div>
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile> -->
+<!-- <section>
+      <app-dropdown (customerChange)="update($event)"></app-dropdown>
+    </section>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <app-weatherdetails [weatherdet]="details"></app-weatherdetails>
+  </mat-grid-tile>
+</mat-grid-list> -->

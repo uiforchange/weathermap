@@ -1,0 +1,11 @@
+<section style="text-align: center">
+  <h2>Weather report for Next 5 days</h2>
+
+  <ul style="text-align: center">
+    <li *ngFor="let hero of response$?.list | slice: 0:5; let i = index">
+      Day {{ i + 1 }}:
+      <p>Sea Level : {{ hero.main.sea_level }}</p>
+      <p>Temperature : {{ hero.main.temp }}</p>
+    </li>
+  </ul>
+</section>

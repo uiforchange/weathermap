@@ -1,0 +1,23 @@
+<section>
+  <h3 style="font-style: italic;">Current Weather Details:</h3>
+  <a *ngIf="weatherdet" (click)="navigateToNext5Days()">
+    <p>
+      Country Name : <button class="button">{{ weatherdet.name }}</button>
+    </p>
+    <p>
+      Current temperature :
+      <button class="button">{{ weatherdet.main.temp }}</button>
+    </p>
+
+    <p>
+      Humidity Level :
+      <button class="button">{{ weatherdet.humidity }}%</button>
+    </p>
+    <p>
+      Sunrise : <button class="button">{{ weatherdet.sys.sunrise }}%</button>
+    </p>
+    <p>
+      Sunset : <button class="button">{{ weatherdet.sys.sunset }}%</button>
+    </p>
+  </a>
+</section>
