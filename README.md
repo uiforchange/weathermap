@@ -1,1 +1,2 @@
 # weathermap
+**/node_modeules
